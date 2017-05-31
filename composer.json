@@ -1,0 +1,31 @@
+{
+  "name": "crazyfactory/docblocks",
+  "description": "A library for parsing and working with php docblocks from within your code.",
+  "keywords": [
+    "docs",
+    "docblock",
+    "reflection"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Wolf T. Mathes",
+      "email": "fanatik99@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "CrazyFactory\\DocBlocks\\": "src",
+      "CrazyFactory\\DocBlocksTests\\": "tests"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "5.5.*",
+    "squizlabs/php_codesniffer": "2.*"
+  },
+  "scripts": {
+    "test": "phpunit -c phpunit.xml",
+    "lint": "phpcs --standard=phpcs.xml --colors src/",
+    "lint-fix": "phpcbf --standard=phpcs.xml --no-patch --colors src/"
+  }
+}

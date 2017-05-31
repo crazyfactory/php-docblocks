@@ -1,0 +1,10 @@
+# dev environment
+.idea/*
+!.idea/inspectionProfiles/*.xml
+!.idea/runConfigurations/*.xml
+!.idea/codeStyleSettings.xml
+
+# packages
+composer.lock
+vendor/
+node_modules/
