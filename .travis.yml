@@ -16,14 +16,18 @@ before_script:
 
 script:
   - composer test
+  
+deploy:
+    provider: script
+    script: scripts/deploy.sh
+    skip_cleanup: false
+    on:
+      tags: true
+      condition: "$TRAVIS_PHP_VERSION = 7.1"
 
 cache:
   directories:
     - $HOME/.composer/cache
 
 notifications:
-  slack:
-    rooms:
-      - crazyfactory:$SLACK_API_KEY#dev-noise
-      - crazyfactory:$SLACK_API_KEY#travis
-    on_start: always
+    slack: crazyfactory:Z3NJKlj5jdPOE1YrjPPyDPKb
