@@ -30,4 +30,4 @@ $results = DocBlock::parse($myDocBlockString);
 ```
 
 ## Changelog
-- 2.0.0 added auto-deploy via github tags
+- 2.0.0 added auto-deploy via travis CI with githubtags as version-nr.
