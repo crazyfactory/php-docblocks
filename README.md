@@ -29,4 +29,5 @@ If you only care for the results in form of simple DocBlockParameter-array you c
 $results = DocBlock::parse($myDocBlockString);
 ```
 
-
+## Changelog
+- 2.0.0 added auto-deploy via github tags
