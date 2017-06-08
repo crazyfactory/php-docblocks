@@ -9,6 +9,10 @@
   "license": "MIT",
   "authors": [
     {
+      "name": "CrazyFactory",
+      "email": "dev@crazy-factory.com"
+    },
+    {
       "name": "Wolf T. Mathes",
       "email": "fanatik99@gmail.com"
     }
