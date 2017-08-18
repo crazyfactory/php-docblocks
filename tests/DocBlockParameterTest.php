@@ -1,7 +1,6 @@
 <?php
 
-
-namespace Crazyfactory\DocBlocksTests;
+namespace Crazyfactory\DocBlocks\Tests;
 
 use CrazyFactory\DocBlocks\DocBlockParameter;
 

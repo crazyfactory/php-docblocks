@@ -19,9 +19,16 @@
   ],
   "autoload": {
     "psr-4": {
-      "CrazyFactory\\DocBlocks\\": "src",
-      "CrazyFactory\\DocBlocksTests\\": "tests"
+      "CrazyFactory\\DocBlocks\\": "src/"
     }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "CrazyFactory\\DocBlocks\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": ">=7.1.0"
   },
   "require-dev": {
     "phpunit/phpunit": "5.5.*",
