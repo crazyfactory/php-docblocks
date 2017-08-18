@@ -218,6 +218,24 @@ class DocBlock implements \IteratorAggregate
     }
 
     /**
+     * Gets the first value of the first result with a matching key.
+     *
+     * @param null|string $key
+     *
+     * @return string
+     * @throws \Exception
+     */
+    public function firstValueOrFail(?string $key): string
+    {
+        $result = $this->firstValue($key);
+        if (!$result) {
+            throw new \Exception("DocBlock key '$key' not found!");
+        }
+
+        return $result;
+    }
+
+    /**
      * Gets the first result with a matching key.
      *
      * @param string $key
@@ -244,7 +262,7 @@ class DocBlock implements \IteratorAggregate
      *
      * @return DocBlockParameter
      */
-    public function firstOrFail(?string $key)
+    public function firstOrFail(?string $key): DocBlockParameter
     {
         $result = $this->first($key);
         if (!$result) {

@@ -220,6 +220,18 @@ class DocBlockTest extends \PHPUnit_Framework_TestCase
         }
     }
 
+    public function testFirstValueOrFail() {
+        $value = $this->docBlock->firstValueOrFail('apple');
+        $this->assertEquals('this is an apple', $value);
+    }
+
+    /**
+     * @expectedException \Exception
+     */
+    public function testFirstValueOrFail_throwsException() {
+        $this->docBlock->firstValueOrFail('does-not-exist');
+    }
+
     public function testFirstOrFail()
     {
         // Flat
